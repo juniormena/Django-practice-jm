@@ -1,0 +1,10 @@
+{% extends 'posts/base.html' %}
+    {% block content %}
+       {%  for post in all_posts%}
+           <div class="row">
+                <img src="{{ post.image.url }}" class="image-responsive" with="250px" height="200px"/>
+           </div>
+           <h2 class="blockquote"><a href="{{post.get_absolute_url}}">{{post.title}}<small> Written by {{ post.authors }}</small></a></h2>
+       {% endfor %}
+       <button class="btn"> fsdfg<span class="badge badge-primary"></span> </button>
+    {% endblock content %}
